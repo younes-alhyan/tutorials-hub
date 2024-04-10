@@ -38,7 +38,8 @@ in .gitignore file:
 git add -f file//force add 
 		Tagging And Releasing (18 and 19)
 git tag (version)//add tag
-git tag//currunt tag
+git describe --tags --abbrev=0//currunt tag
+git tag//tags display
 git tag -d <tag>//delete tag
 tags types:
 	git tag -a <tag_name> -m "Tag message"//Annotated tags: Annotated tags are stored as full objects in the Git database.  
