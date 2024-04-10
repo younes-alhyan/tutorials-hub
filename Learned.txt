@@ -1,16 +1,21 @@
+		Main(from 3 to 6)
 git status //to see file trcking
 git add //to trak file
 git commit -m ""//to commit changes  
 git restore --staged <file> or git reset HEAD <file>//unstage tracking 
 git reset --soft HEAD~1//Undo the last commit
 git push //to push to remote repository
-git config --global --edit//to edit configs
 git pull (remote) //to pull changes from remote repository
-git config --globl alias.(shortcut) (commande)//to make shortcuts
-		BRANCHING
+		Config(7 and 11)
+git config --global --edit//to edit configs
+git config --global alias.(shortcut) (commande)//to make shortcuts
+		BRANCHING(video number 12)
 git branch//display branches
 git branch -d (branch_name)//delete branch
 git branch (branch_name)//add branch
 git checkout (branch_name)//navigate to branch
 git checkout -b (branch_name)//both
 git merge (branche to merge)//merge branche
+		STACH(13 and 14)
+git stash//stach files
+git stash pop//unstach files
