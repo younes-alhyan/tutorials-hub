@@ -1,5 +1,5 @@
 		Main(from 3 to 6)
-git status //to see file trcking 
+git status //to see file tarcking
 git add //to trak file
 git commit -m ""//to commit changes  
 git restore --staged <file> or git reset HEAD <file>//unstage tracking 
@@ -23,5 +23,6 @@ git stash list//display stashs
 git stash save "msg"//add costume msg to stash
 git stash apply//unstash files without removing stash
 git stash drop//remove stach
-git stash show//display stash elements thats all for today
+git stash show//display stash elements
+git stash clear//remove all stachs
 
