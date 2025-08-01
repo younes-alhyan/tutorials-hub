@@ -1,0 +1,8 @@
+git status //to see file trcking
+git add //to trak file
+git commit -m ""//to commit changes 
+git reset HEAD //to reset 
+git push //to push to remote repository
+git config --global --edit//to edit configs
+git pull (remote) //to pull changes from remote repository
+git config --globl alias.(shortcut) (commande)//to make shortcuts
