@@ -6,5 +6,10 @@
 
 ## Git
 
-[<img src="./icons/git.svg" width="250"/>](./tutorials/git.md)  
-[Git Tutorial](./tutorials/git.md) – Version control fundamentals: branching, commits, pull requests, and collaborative workflows. Essential for every developer.
+[<img src="./icons/git.svg" width="250"/>](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=git)  
+[Git Tutorial](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=git) – Version control fundamentals: branching, commits, pull requests, and collaborative workflows. Essential for every developer.
+
+## Node.js
+
+[<img src="./icons/nodejs.svg" width="250"/>](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=nodejs)  
+[Node.js Tutorial](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=nodejs) – Learn Node.js essentials for backend development, package management, file system, events, and building scalable applications.
