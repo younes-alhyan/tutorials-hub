@@ -45,7 +45,7 @@
     <script>
       const backBtn = document.getElementById("backBtn");
       let backBtnHref = "./index.html";
-      addEventListener("click", () => {
+      backBtn.addEventListener("click", () => {
         window.location.href = backBtnHref; // main page
       });
       async function renderMarkdown(file) {
@@ -85,7 +85,7 @@
         //change img.src
         const img = document.querySelector("img");
         img.src = `./icons/${tutorial}.svg`;
-        
+
         const list = document.querySelector("ol");
         const items = list.querySelectorAll("li");
         const headers = document.querySelectorAll("h2");
