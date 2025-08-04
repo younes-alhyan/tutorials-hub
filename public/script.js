@@ -41,7 +41,7 @@ function updateTitle(tutorial) {
     head.appendChild(faviconLink);
     return;
   }
-  titleElement.textContent = "📚 Tutorials";
+  titleElement.textContent = "📚 Tutorials Hub";
   const favicon = document.querySelector('link[rel~="icon"]');
   if (favicon) {
     favicon.remove();
