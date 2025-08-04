@@ -70,6 +70,25 @@ function addCopyButton(code) {
   code.parentNode.appendChild(copyContainer);
 }
 
+function toAnchor(str) {
+  // 1. URL-encode any emoji or special characters
+  let encoded = encodeURIComponent(str);
+
+  // 2. Lowercase the string
+  encoded = encoded.toLowerCase();
+
+  // 3. Replace spaces and multiple hyphens with single hyphen
+  encoded = encoded.replace(/%20| /g, "-");
+
+  // 4. Replace other unwanted characters (&, /, etc.) with hyphen
+  encoded = encoded.replace(/[^a-z0-9\-!%]/g, "");
+
+  // 5. Collapse multiple hyphens into one
+  encoded = encoded.replace("%26", "");
+
+  return encoded;
+}
+
 async function init() {
   const tutorial = getTutorial();
   const path = tutorial ? `./tutorials/${tutorial}.md` : "README.md";
@@ -93,7 +112,7 @@ async function init() {
 
   // Give each header an ID slug
   headers.forEach((h) => {
-    const slug = h.textContent.toLowerCase().replace(/[^\w]+/g, "-");
+    const slug = toAnchor(h.textContent);
     h.id = slug;
   });
 
@@ -101,7 +120,9 @@ async function init() {
   items.forEach((li) => {
     const a = li.querySelector("a");
     if (!a) return;
-    const slug = a.getAttribute("href").slice(1);
+    const slug = a.getAttribute("href").slice(1).toLowerCase();
+    console.log(slug);
+
     a.addEventListener("click", (e) => {
       e.preventDefault();
       const el = document.getElementById(slug);
@@ -143,16 +164,21 @@ hljs.registerLanguage("bash", function (hljs) {
     contains: [
       hljs.HASH_COMMENT_MODE, // comments
       {
-        className: "built_in", // commands
+        className: "built_in", // first command
         begin: /^[a-zA-Z0-9_\-\.]+/,
         end: /\s/,
       },
       {
-        className: "params", // arguments
-        begin: /(?<=^|\s)-[a-zA-Z]\b|(?<=^|\s)--[a-zA-Z0-9_\-]+\b/,
+        className: "title", // second word if it doesn't start with -
+        begin: /(?<=^[a-zA-Z0-9_\-\.]+\s)(?!-)[a-zA-Z0-9_\-\.]+/,
+        end: /\s/,
+      },
+      {
+        className: "params", // arguments (-x or --xxx)
+        begin: /-[a-zA-Z]\b|--[a-zA-Z0-9_\-]+\b/,
       },
       hljs.QUOTE_STRING_MODE, // strings
-      hljs.NUMBER_MODE,
+      hljs.NUMBER_MODE, // numbers
     ],
   };
 });
