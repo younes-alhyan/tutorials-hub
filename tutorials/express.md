@@ -5,17 +5,17 @@
 
 ## 📌 Table of Contents
 
-1. [Introduction & Setup](#🏁-introduction--setup)
-2. [Creating a Server](#🖥️-creating-a-server)
-3. [Routing](#🛣️-routing)
-4. [Request Object (`req`)](#📥-request-object-req)
-5. [Response Object (`res`)](#📤-response-object-res)
-6. [Middlewares](#🧩-middlewares)
-7. [Routers & Structure](#🗂️-routers--structure)
-8. [Status Codes](#📡-status-codes)
-9. [CORS](#🌍-cors)
-10. [Error Handling](#❌-error-handling)
-11. [Best Practices](#✅-best-practices)
+1. [🏁 Introduction & Setup](#🏁-introduction--setup)
+2. [🖥️ Creating a Server](#🖥️-creating-a-server)
+3. [🛣️ Routing](#🛣️-routing)
+4. [📥 Request Object (`req`)](#📥-request-object-req)
+5. [📤 Response Object (`res`)](#📤-response-object-res)
+6. [🧩 Middlewares](#🧩-middlewares)
+7. [🗂️ Routers & Structure](#🗂️-routers--structure)
+8. [📡 Status Codes](#📡-status-codes)
+9. [🌍 CORS](#🌍-cors)
+10. [❌ Error Handling](#❌-error-handling)
+11. [✅ Best Practices](#✅-best-practices)
 
 ## 🏁 Introduction & Setup
 
