@@ -5,15 +5,15 @@
 
 ## 📌 Table of Contents
 
-1. [Introduction & Setup](#🏁-introduction--setup)
-2. [Modules & Packages](#📦-modules--packages)
-3. [File System](#🗂️-file-system)
-4. [Streams & Buffers](#💧-streams--buffers)
-5. [Events & EventEmitter](#⚡-events--eventemitter)
-6. [Child Processes](#👶-child-processes)
-7. [Environment & Config](#🌐-environment--config)
-8. [Timers & Scheduling](#⏱️-timers--scheduling)
-9. [Error Handling](#❌-error-handling)
+1. [🏁 Introduction & Setup](#🏁-introduction--setup)
+2. [📦 Modules & Packages](#📦-modules--packages)
+3. [🗂️ File System](#🗂️-file-system)
+4. [💧 Streams & Buffers](#💧-streams--buffers)
+5. [⚡ Events & EventEmitter](#⚡-events--eventemitter)
+6. [👶 Child Processes](#👶-child-processes)
+7. [🌐 Environment & Config](#🌐-environment--config)
+8. [⏱️ Timers & Scheduling](#⏱️-timers--scheduling)
+9. [❌ Error Handling](#❌-error-handling)
 
 ## 🏁 Introduction & Setup
 
