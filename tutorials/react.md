@@ -111,6 +111,33 @@ function Counter() {
 - Works with **primitives, arrays, objects**.
 - For arrays/objects → always create a new copy with spread `[...]` or `{...}` before updating.
 
+**Example Updating Arrays**:
+
+```jsx
+const [numbers, setNumbers] = useState([1, 2, 3]);
+
+// Add an item
+setNumbers([...numbers, 4]);
+
+// Remove an item
+setNumbers(numbers.filter((n) => n !== 2));
+
+// Update an item (e.g., double the first number)
+setNumbers(numbers.map((n, i) => (i === 0 ? n * 2 : n)));
+```
+
+**Example Updating Objects**:
+
+```jsx
+const [user, setUser] = useState({ name: "Alice", age: 25 });
+
+// Update a property
+setUser({ ...user, age: 26 });
+
+// Add a new property
+setUser({ ...user, city: "Paris" });
+```
+
 ### 🔹 Side Effects (`useEffect`)
 
 **Concept**: Runs code after render and controls when it should run.
