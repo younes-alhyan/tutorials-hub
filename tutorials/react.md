@@ -216,6 +216,34 @@ function Counter() {
 }
 ```
 
+### 🔹 Context API (`useContext`)
+
+**Concept** : Context lets you create a **shared state** that can be accessed by any component without passing props manually through each level **(prop drilling)**. However, if many components consume the same context, updating it can trigger re-renders in all of them, which may be slower than using `useState` locally.
+
+**Use case**: Best for **shared/global** state like theme, user info, or language settings.
+
+**How to use**:
+
+1. **Create a context**
+
+```js
+const ThemeContext = React.createContext();
+```
+
+2. **Provide a value**
+
+```jsx
+<ThemeContext.Provider value={darkMode}>
+  <App />
+</ThemeContext.Provider>
+```
+
+3. **Consume with `useContext`**
+
+```js
+const theme = useContext(ThemeContext);
+```
+
 ## ⚡ Performance Optimization
 
 ### `React.memo`
