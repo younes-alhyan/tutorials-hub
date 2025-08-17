@@ -76,10 +76,16 @@
         const path = tutorial ? `./tutorials/${tutorial}.md` : "README.md";
         await renderMarkdown(path);
         if (!tutorial) {
+          //change back btn content
           backBtnHref = "https://github.com/younes-alhyan/tutorials-hub";
           backBtn.textContent = "🌐 View on GitHub";
           return;
         }
+
+        //change img.src
+        const img = document.querySelector("img");
+        img.src = `./icons/${tutorial}.svg`;
+
         const list = document.querySelector("ol");
         const items = list.querySelectorAll("li");
         const headers = document.querySelectorAll("h2");
