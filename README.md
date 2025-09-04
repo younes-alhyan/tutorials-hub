@@ -48,3 +48,13 @@
 **Official Documentation** :
 
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+
+## MySQL
+
+[<img src="./icons/mysql.svg" width="250"/>](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=mysql)
+
+[MySQL Tutorial](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=mysql) – Learn MySQL essentials: creating and connecting to databases (local & remote), relational concepts, tables, data types, constraints, SQL queries (CRUD, joins, aggregations), table relations (foreign keys, normalization), and transactions. 🚀
+
+**Official Documentation** :
+
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)](https://www.mysql.com/)
