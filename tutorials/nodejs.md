@@ -65,7 +65,7 @@ npm install <package> --save-dev
   - `package-lock.json` → exact versions of installed packages
   - `node_modules/` → installed modules
 
-## 🗂️ File System (fs)
+## 🗂️ File System
 
 - Read file:
 
