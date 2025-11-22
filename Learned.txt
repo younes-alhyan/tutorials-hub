@@ -1,5 +1,5 @@
 		Main(from 3 to 6)
-git status //to not see file trcking
+git status //to see file trcking
 git add //to trak file
 git commit -m ""//to commit changes  
 git restore --staged <file> or git reset HEAD <file>//unstage tracking 
