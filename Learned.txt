@@ -18,4 +18,10 @@ git checkout -b (branch_name)//both
 git merge (branche to merge)//merge branche
 		STACH(13 and 14)
 git stash//stach files
-git stash pop//unstach files
+git stash pop stash@{'index'}//unstach files with removing stash(last one is the default)
+git stash list//display stashs
+git stash save "msg"//add costume msg to stash
+git stash apply//unstash files without removing stash
+git stash drop//remove stach
+git stash show//display stash elements
+git stash clear//remove all stachs
