@@ -2,7 +2,7 @@
 git status //to see file tarcking
 git add //to trak file
 git commit -m ""//to commit changes  
-git restore --staged <file> or git reset HEAD <file>//unstage tracking 
+git restore --staged <file> or git reset HEAD file//unstage tracking 
 git reset --soft HEAD~1//Undo the last commit
 git push //to push to remote repository
 git pull (remote) //to pull changes from remote repository
@@ -19,10 +19,27 @@ git merge (branche to merge)//merge branche
 		STACH(13 and 14)
 git stash//stach files
 git stash pop stash@{'index'}//unstach files with removing stash(last one is the default)
-git stash list//display stashs
+git stash ls//display stashs
 git stash save "msg"//add costume msg to stash
 git stash apply//unstash files without removing stash
 git stash drop//remove stach
 git stash show//display stash elements
 git stash clear//remove all stachs
-
+		clean(video number 15 and 16)
+git clean -n //display filed would be removed
+git clean -n//remove files
+git log //display commit history
+		ignore(video number 17)
+touch .gitignore //make ignore config file
+in .gitignore file:
+	*."type"//to ignore all files."type"
+	!file."type"//to note ignore file."type"(even its ."type")
+	"dir/" or "file" //to ignore specifed  dir or file
+git add -f file//force add 
+		Tagging(18 and 19)
+git tag (version)//add tag
+git tag//currunt tag
+tags types:
+	git tag -a <tag_name> -m "Tag message"//Annotated tags: Annotated tags are stored as full objects in the Git database.  
+	git tag <tag_name>//Lightweight tags: Lightweight tags are simply pointers to specific commits, similar to branches
+	git tag -s <tag_name> -m "Tag message"//Signed tags: Signed tags are annotated tags that are cryptographically signed using a GPG key
