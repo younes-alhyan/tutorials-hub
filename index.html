@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Markdown Viewer</title>
+    <title>Tutorials</title>
     <!-- GitHub Markdown CSS -->
     <link
       rel="stylesheet"
@@ -54,11 +54,15 @@
         return tutorial;
       }
       async function init() {
+        const HOST = "https://younes-alhyan.github.io/tutorials-hub" 
         const tutorial = getTutorial();
         await renderMarkdown(
-          `https://younes-alhyan.github.io/tutorials-hub/tutorials/${tutorial}.md`
+          `${HOST}/tutorials/${tutorial}.md`
         );
-
+        if (tutorial) {
+            const icon = document.querySelector("img")
+            icon.src = `${HOST}/icons/${tutorial}.svg`
+        }
         const list = document.querySelector("ol");
         const items = list.querySelectorAll("li");
         const headers = document.querySelectorAll("h2");
