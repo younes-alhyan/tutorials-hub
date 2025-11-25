@@ -1,6 +1,6 @@
 # 📁 Git Tutorial
 
-[<img src="../icons/git.svg" width="250"/>](./tutorials/git.md)  
+[<img src="../icons/git.svg" width="250"/>](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=git)  
 **Master Git for version control, collaboration, and professional development.** 🚀
 This tutorial covers all the essential Git commands and concepts you need to confidently work on projects, internships, and personal repositories.
 
@@ -164,4 +164,3 @@ git checkout v1.0
 - Commit often with **clear messages**
 - Pull frequently to avoid conflicts
 - Use `.gitignore` to avoid committing unnecessary files
-
