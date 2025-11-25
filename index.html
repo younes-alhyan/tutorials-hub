@@ -22,14 +22,32 @@
       a {
         color: #58a6ff;
       }
+      #backBtn {
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: #161b22;
+        color: #58a6ff;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      #backBtn:hover {
+        background-color: #21262d;
+      }
     </style>
   </head>
   <body>
+    <button id="backBtn">⬅ Back to Tutorials Hub</button>
     <div id="content" class="markdown-body"></div>
 
     <!-- Marked library -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
+      const backBtn = document.getElementById("backBtn");
+      let backBtnHref = "./index.html";
+      addEventListener("click", () => {
+        window.location.href = backBtnHref; // main page
+      });
       async function renderMarkdown(file) {
         try {
           const res = await fetch(file);
@@ -54,14 +72,13 @@
         return tutorial;
       }
       async function init() {
-        const HOST = "https://younes-alhyan.github.io/tutorials-hub" 
         const tutorial = getTutorial();
-        await renderMarkdown(
-          `${HOST}/tutorials/${tutorial}.md`
-        );
-        if (tutorial) {
-            const icon = document.querySelector("img")
-            icon.src = `${HOST}/icons/${tutorial}.svg`
+        const path = tutorial ? `./tutorials/${tutorial}.md` : "README.md";
+        await renderMarkdown(path);
+        if (!tutorial) {
+          backBtnHref = "https://github.com/younes-alhyan/tutorials-hub";
+          backBtn.textContent = "🌐 View on GitHub";
+          return;
         }
         const list = document.querySelector("ol");
         const items = list.querySelectorAll("li");
