@@ -1,0 +1,86 @@
+body {
+  background-color: #0d1117; /* dark theme */
+  color: #c9d1d9;
+  font-family: sans-serif;
+  padding: 2rem;
+}
+.markdown-body {
+  max-width: 900px;
+  margin: auto;
+  background-color: #0d1117;
+  padding: 2rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+}
+a {
+  color: #58a6ff;
+}
+#backBtn {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #161b22;
+  color: #58a6ff;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#backBtn:hover {
+  background-color: #21262d;
+}
+ol li.active a {
+  font-weight: bold;
+  color: #f78166;
+}
+pre {
+  position: relative;
+}
+.copy-container {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  gap: 10px;
+}
+.copy-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1f252e; /* hover color */
+  border-radius: 5px;
+  transform: scaleX(0);
+  transform-origin: right; /* change to right if you want right-to-left */
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+.copy-container:hover::before {
+  transform: scaleX(1);
+}
+.copy-container svg {
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.copy-text {
+  z-index: 1;
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+.copy-container:hover {
+  background-color: #1f252e; /* slightly brighter/darker hover */
+}
+.copy-container:hover svg {
+  transform: scale(1.15);
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.copy-container:hover .copy-text {
+  display: inline-block;
+}
