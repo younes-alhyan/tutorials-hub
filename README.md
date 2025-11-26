@@ -13,3 +13,8 @@
 
 [<img src="./icons/nodejs.svg" width="250"/>](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=nodejs)  
 [Node.js Tutorial](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=nodejs) – Learn Node.js essentials for backend development, package management, file system, events, and building scalable applications.
+
+## Express
+
+[<img src="./icons/express.svg" width="250"/>](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=express)  
+[Express Tutorial](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=express) – Learn how to build fast, minimalist web servers and APIs with Express, the popular Node.js framework. Covers routing, middleware, request handling, and creating scalable backend applications.
