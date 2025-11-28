@@ -6,15 +6,15 @@ This tutorial covers all the essential Git commands and concepts you need to con
 
 ## 📌 Table of Contents
 
-1. [Getting Started](#🏁-getting-started)
-2. [Basic Commands](#💻-basic-commands)
-3. [Branching & Merging](#🌿-branching--merging)
-4. [Remote Repositories](#🌐-remote-repositories)
-5. [Undoing Changes](#🔄-undoing-changes)
-6. [Stashing](#🧳-stashing-changes)
-7. [Viewing History](#📜-viewing-history)
-8. [Tags](#🏷️-tags)
-9. [Best Practices](#✅-best-practices)
+1. [🏁 Getting Started](#🏁-getting-started)
+2. [💻 Basic Commands](#💻-basic-commands)
+3. [🌿 Branching & Merging](#🌿-branching--merging)
+4. [🌐 Remote Repositories](#🌐-remote-repositories)
+5. [🔄 Undoing Changes](#🔄-undoing-changes)
+6. [🧳 Stashing](#🧳-stashing-changes)
+7. [📜 Viewing History](#📜-viewing-history)
+8. [🏷️ Tags](#🏷️-tags)
+9. [✅ Best Practices](#✅-best-practices)
 
 ## 🏁 Getting Started
 
