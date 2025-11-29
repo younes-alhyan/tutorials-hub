@@ -61,6 +61,29 @@ export default Welcome;
 <Welcome user="Bob" />;
 ```
 
+### Rendering Lists with `.map()`
+
+Use `.map()` to render multiple items from an array:
+
+```jsx
+const items = ["Apple", "Banana", "Cherry"];
+
+function List() {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+}
+```
+
+**Key points:**
+
+- **`key` attribute**: required for React to track list items efficiently. Must be **unique** among siblings.
+- Avoid using indexes as keys if the list can change order, as it may cause unexpected re-renders.
+
 ## 🎣 React Hooks
 
 Hooks let you use **state, lifecycle, and context** in functional components.
