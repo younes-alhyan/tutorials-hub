@@ -6,15 +6,15 @@
 
 ## 📌 Table of Contents
 
-1. [🏁 Getting Started](#-getting-started)
-2. [🔤 JSX](#-jsx)
-3. [🧩 Components](#-components)
-4. [🎣 React Hooks](#-react-hooks)
-5. [⚡ Performance Optimization](#-performance-optimization)
-6. [🎛️ Controlled vs Uncontrolled Components](#-controlled-vs-uncontrolled-components)
-7. [🔀 Component Composition Patterns](#-component-composition-patterns)
-8. [🛠️ Utility React Features](#-utility-react-features)
-9. [📝 Forms & Events](#-forms--events)
+1. [🏁 Getting Started](#🏁-getting-started)
+2. [🔤 JSX](#🔤-jsx)
+3. [🧩 Components](#🧩-components)
+4. [🎣 React Hooks](#🎣-react-hooks)
+5. [⚡ Performance Optimization](#⚡-performance-optimization)
+6. [🎛️ Controlled vs Uncontrolled Components](#🎛️-controlled-vs-uncontrolled-components)
+7. [🔀 Component Composition Patterns](#🔀-component-composition-patterns)
+8. [🛠️ Utility React Features](#🛠️-utility-react-features)
+9. [📝 Forms & Events](#📝-forms--events)
 
 ## 🏁 Getting Started
 
@@ -166,38 +166,77 @@ function Counter() {
 }
 ```
 
-### 🔹 Context (`useContext`)
+## ⚡ Performance Optimization
 
-**Concept**: Avoid **prop drilling** by sharing state globally.
+### `React.memo`
+
+Prevents **child re-render** if props haven’t changed. Useful for functional components that receive the same props frequently.
 
 ```jsx
-import { createContext, useContext, useState } from "react";
+const Child = React.memo(({ value }) => {
+  console.log("Child rendered");
+  return <p>Value: {value}</p>;
+});
 
-const ThemeContext = createContext();
+function Parent() {
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState("");
 
-function ThemeProvider({ children }) {
-  const [dark, setDark] = useState(false);
   return (
-    <ThemeContext.Provider value={{ dark, setDark }}>
-      {children}
-    </ThemeContext.Provider>
+    <div>
+      <Child value={count} />
+      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+      <input
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Type..."
+      />
+    </div>
   );
 }
-
-function Button() {
-  const { dark, setDark } = useContext(ThemeContext);
-  return (
-    <button onClick={() => setDark(!dark)}>
-      {dark ? "Dark" : "Light"} Mode
-    </button>
-  );
-}
+// Here, Child only re-renders when `count` changes, not when `text` changes.
 ```
 
-### 🔹 Callback (`useCallback`)
+### `useMemo`
 
-**Concept**: Memoizes a function so it **doesn’t get recreated on every render**.
-Useful when passing functions as props to children with `React.memo`.
+Memoizes **expensive calculations** to avoid re-executing them unnecessarily.
+`
+
+```jsx
+function heavyCalculation(num) {
+  console.log("Calculating...");
+  let result = 0;
+  for (let i = 0; i < 1e7; i++) {
+    result += num;
+  }
+  return result;
+}
+
+function App() {
+  const [count, setCount] = useState(1);
+  const [text, setText] = useState("");
+
+  const memoizedResult = useMemo(() => heavyCalculation(count), [count]);
+
+  return (
+    <div>
+      <p>Result: {memoizedResult}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <input
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Type..."
+      />
+    </div>
+  );
+}
+
+// heavyCalculation only runs when `count` changes, not when `text` changes.
+```
+
+### `useCallback`
+
+Memoizes **functions** to prevent unnecessary child re-renders.
 
 ```jsx
 import { useState, useCallback } from "react";
@@ -209,6 +248,7 @@ const Child = React.memo(({ onClick }) => {
 
 function Parent() {
   const [count, setCount] = useState(0);
+  const [text, setText] = useState("");
 
   const increment = useCallback(() => setCount((c) => c + 1), []);
 
@@ -216,28 +256,18 @@ function Parent() {
     <div>
       <p>Count: {count}</p>
       <Child onClick={increment} />
+      <input
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Type..."
+      />
     </div>
   );
 }
+
+// Child re-renders only when `increment` function reference changes.
+// Typing in the input does not trigger a re-render of Child.
 ```
-
-## ⚡ Performance Optimization
-
-### `React.memo`
-
-Prevents **child re-render** if props haven’t changed.
-
-### `useMemo`
-
-Memoizes **expensive calculations**.
-
-```jsx
-const result = useMemo(() => heavyCalculation(num), [num]);
-```
-
-### `useCallback`
-
-Memoizes **functions**. Prevents unnecessary child re-renders.
 
 ## 🎛️ Controlled vs Uncontrolled Components
 
