@@ -25,7 +25,7 @@
 17. [📱 Responsive Design](#📱-responsive-design)
 18. [📌 Keywords & Custom Values](#📌-keywords--custom-values)
 
-# 📏 Dimensions
+## 📏 Dimensions
 
 **CSS :**
 
@@ -46,7 +46,7 @@ div {
 <div class="w-4 h-4 min-w-4 max-w-4 min-h-4 max-h-4"></div>
 ```
 
-# 📍 Position
+## 📍 Position
 
 **CSS :**
 
@@ -62,7 +62,7 @@ div {
 <div class="relative"></div>
 ```
 
-## Offsets
+### Offsets
 
 **CSS :**
 
@@ -81,7 +81,7 @@ div {
 <div class="top-1 right-1 bottom-1 left-1"></div>
 ```
 
-## Z-index
+### Z-index
 
 **CSS :**
 
@@ -97,7 +97,7 @@ div {
 <div class="z-10"></div>
 ```
 
-# 🖥️ Display
+## 🖥️ Display
 
 **CSS :**
 
@@ -113,7 +113,7 @@ div {
 <div class="flex"></div>
 ```
 
-# 📐 Flexbox
+## 📐 Flexbox
 
 **CSS :**
 
@@ -138,7 +138,7 @@ div {
 ></div>
 ```
 
-# 🗂️ Grid
+## 🗂️ Grid
 
 **CSS :**
 
@@ -158,9 +158,9 @@ div {
 <div class="grid grid-cols-3 grid-rows-2 gap-4 place-items-center"></div>
 ```
 
-# 📦 Margin & Padding
+## 📦 Margin & Padding
 
-## Margin
+### Margin
 
 **CSS :**
 
@@ -182,7 +182,7 @@ div {
 <div class="m-4 mt-4 mr-4 mb-4 ml-4 mx-4 my-4"></div>
 ```
 
-## Padding
+### Padding
 
 **CSS :**
 
@@ -204,7 +204,7 @@ div {
 <div class="p-4 pt-4 pr-4 pb-4 pl-4 px-4 py-4"></div>
 ```
 
-# 🎨 Color & Background Color
+## 🎨 Color & Background Color
 
 **CSS :**
 
@@ -224,7 +224,7 @@ div {
 **Notes:**
 `500` and `600` indicate color **shade/intensity**.
 
-## Gradient Color
+### Gradient Color
 
 **CSS :**
 
@@ -240,7 +240,7 @@ div {
 <div class="bg-gradient-to-r from-red-500 via-yellow to-green-600 p-6"></div>
 ```
 
-# 🛡️ Borders
+## 🛡️ Borders
 
 **CSS :**
 
@@ -262,9 +262,9 @@ div {
 **Notes:**
 Control corners with `rounded-{direction}-{size}`.
 
-# 🔤 Fonts & Typography
+## 🔤 Fonts & Typography
 
-## Basic Typography
+### Basic Typography
 
 **CSS :**
 
@@ -284,7 +284,7 @@ div {
 <div class="font-sans text-base font-bold italic text-center"></div>
 ```
 
-## Text Utilities
+### Text Utilities
 
 - Line height: `leading-{size}`
 - Letter spacing: `tracking-{size}`
@@ -314,7 +314,7 @@ div {
 <div class="leading-6 tracking-wider uppercase underline truncate"></div>
 ```
 
-## Custom/Imported Fonts
+### Custom/Imported Fonts
 
 1. Import font:
 
@@ -336,7 +336,7 @@ fontFamily: {
 <div class="font-myFont text-lg"></div>
 ```
 
-# 🔄 Transform
+## 🔄 Transform
 
 **CSS :**
 
@@ -352,7 +352,7 @@ div {
 <div class="rotate-45 scale-150 translate-x-5 translate-y-2.5"></div>
 ```
 
-# ⏱️ Transition
+## ⏱️ Transition
 
 **CSS :**
 
@@ -368,9 +368,9 @@ div {
 <div class="transition-all duration-300 ease-in-out"></div>
 ```
 
-# 🎞️ Animation
+## 🎞️ Animation
 
-## Predefined Animations
+### Predefined Animations
 
 **Tailwind Classes:** `animate-none`, `animate-spin`, `animate-ping`, `animate-pulse`, `animate-bounce`
 
@@ -384,7 +384,7 @@ div {
 - Timing: `ease-linear`
 - Infinite: built-in with most classes
 
-## Custom Animation
+### Custom Animation
 
 **Step 1: Define keyframes**
 
@@ -406,7 +406,7 @@ animation: {
 <div class="animate-my-spin"></div>
 ```
 
-# ✨ Effects, Filters, Opacity, Shadows & Backdrop
+## ✨ Effects, Filters, Opacity, Shadows & Backdrop
 
 **CSS :**
 
@@ -425,7 +425,7 @@ div {
 <div class="opacity-50 shadow-md blur-sm brightness-80 backdrop-blur-md"></div>
 ```
 
-# 🖱️ Cursor
+## 🖱️ Cursor
 
 ```css
 div {
@@ -437,7 +437,7 @@ div {
 <div class="cursor-pointer"></div>
 ```
 
-# ⚡ Outline & Focus Rings
+## ⚡ Outline & Focus Rings
 
 ```css
 div {
@@ -450,7 +450,7 @@ div {
 <div class="outline outline-2 outline-blue-500 outline-offset-2"></div>
 ```
 
-# 📐 Aspect Ratio
+## 📐 Aspect Ratio
 
 ```css
 div {
@@ -462,7 +462,7 @@ div {
 <div class="aspect-video"></div>
 ```
 
-# 📱 Responsive Design
+## 📱 Responsive Design
 
 Tailwind makes building responsive layouts easy using **predefined breakpoints**. These breakpoints are **mobile-first**, meaning the default styles apply to all screens, and the prefixed classes apply **from the breakpoint and up**.
 
@@ -519,7 +519,7 @@ div {
 }
 ```
 
-# 📌 Keywords & Custom Values
+## 📌 Keywords & Custom Values
 
 ### Colors
 
