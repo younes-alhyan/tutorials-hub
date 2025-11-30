@@ -57,4 +57,14 @@
 
 **Official Documentation** :
 
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)](https://www.mysql.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+
+## Tailwind CSS
+
+[<img src="./icons/tailwindcss.svg" width="250"/>](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=tailwindcss)
+
+[Tailwind CSS Tutorial](https://younes-alhyan.github.io/tutorials-hub/index.html?tutorial=tailwindcss) – Learn Tailwind CSS essentials for building modern, utility-first responsive designs. Covers layout, spacing, typography, colors, components, flexbox, grid, and customization.
+
+**Official Documentation** :
+
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
